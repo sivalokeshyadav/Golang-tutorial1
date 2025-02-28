@@ -20,12 +20,12 @@ func ptf(a *int) {
 func pointer_func() {
 	var x = 100
 	fmt.Printf("The value of x before function call is:%d\n", x)
-	//taking a pointervariable
-	//andassigningtheaddress
-	//ofxtoit
+	//taking a pointer variable
+	//and assigning the address
+	//of x to it
 	var pa *int = &x
-	//callingthefunctionby
-	//passingpointofunction
+	//calling the function by
+	//passing point of unction
 	ptf(pa)
 	fmt.Printf("The value of x after function call is:%d\n", x)
 

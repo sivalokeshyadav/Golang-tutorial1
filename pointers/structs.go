@@ -33,7 +33,7 @@ type Person struct {
 }
 
 func struct_pointer() {
-	//creatinganinstanceofthestruct
+	//creating an instance of the struct
 	p1 := Person{name: "A", age: 25}
 
 	// Creating a pointer to the struct

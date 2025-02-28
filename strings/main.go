@@ -34,9 +34,9 @@ import (
 //	in the regular expressions, and in HTML.
 //
 // Trim:-The Trim function removes all specified leading and trailing characters from a string.
-// syntax:-func Trim(s string, cutset string) string,s:stringtotrim,cutset:-characterstoremovefrombothends
-// Trimleft:-removesleftendcharactersfromspecified
-// TrimRight:-removesrightendcharactersfromspecified,
+// syntax:-func Trim(s string, cutset string) string,s:string to trim,cutset:-characters to remove from both ends
+// Trimleft:-removes leftend characters from specified
+// TrimRight:-removes rightend characters from specified,
 // TrimSpace:removes all leading and trailing whitespace from a string.syntax:-func TrimSpace(s string) string
 // The TrimPrefix function removes a specified prefix from the beginning of a string if present.
 // syntax:-func TrimPrefix(s, prefix string) string
@@ -85,12 +85,13 @@ func main() {
 	// Adding escape character
 	// in raw literals
 	My_value_4 := `Hello!\nGeeksforGeeks`
-
+	fmt.Println("-----------------------------------")
 	// Displaying strings
 	fmt.Println("String 1: ", My_value_1)
 	fmt.Println("String 2: ", My_value_2)
 	fmt.Println("String 3: ", My_value_3)
 	fmt.Println("String 4: ", My_value_4)
+	fmt.Println("-----------------------------------")
 	mystr := "Welcome to siva"
 
 	fmt.Println("String:", mystr)
@@ -105,24 +106,27 @@ func main() {
 	   fmt.Println("String:", mystr)
 
 	*/
-
+	fmt.Println("-----------------------------------")
 	// String as a range in the for loop
 	for index, s := range "GeeksForGeeKs" {
 
 		fmt.Printf("The index number of %c is %d\n", s, index)
 	}
+	fmt.Println("-----------------------------------")
 	//creating and initializing a string
 	str := "Welcome raja"
 	// Accessing the bytes of the given string
 	for c := 0; c < len(str); c++ {
 		fmt.Printf("\nCharacter =%c Bytes=%x", str[c], str[c])
 	}
+	fmt.Println("-----------------------------------")
 	//create a string from slice
 	//createingandinitalizingasliceofbyte
 	myslice1 := []byte{0x47, 0x65, 0x65, 0x6b, 0x73}
 	//createingstringfromslice
 	mystring1 := string(myslice1)
 	fmt.Println("\nString from slice:", mystring1)
+	fmt.Println("-----------------------------------")
 	//creatingandinitailizingasliceofrune
 	myslice2 := []rune{0x0047, 0x0065, 0x0065, 0x006b, 0x0073}
 	// Creating a string from the slice
@@ -130,6 +134,7 @@ func main() {
 
 	// Displaying the string
 	fmt.Println("String 2: ", mystring2)
+	fmt.Println("-----------------------------------")
 	//lengthofthestring
 	mystrlen := "Welcometothegeeksforgeeks????????"
 	// Using len() function
@@ -139,6 +144,7 @@ func main() {
 	fmt.Println("string:", mystr)
 	fmt.Println("Length 1:", length1)
 	fmt.Println("Length 2:", length2)
+	fmt.Println("-----------------------------------")
 	//trimstring
 	strim := "@@Hello, Geeks!!"
 	result1 := strings.Trim(strim, "@!")
@@ -150,6 +156,7 @@ func main() {
 	ss := "   Hello, Geeks   "
 	result4 := strings.TrimSpace(ss)
 	fmt.Println(result4)
+	fmt.Println("-----------------------------------")
 	// TrimPrefix function
 	prefix := "Hell"
 	str1 := "Hello, Geeks"
@@ -160,6 +167,7 @@ func main() {
 	str2 := "Hello, Geeks"
 	result6 := strings.TrimSuffix(str2, suffix)
 	fmt.Println(result6)
+	fmt.Println("-----------------------------------")
 	//splittingthestring
 	str3 := "Welcome, to, Geeks, for, Golang"
 	fmt.Println("", str3)
@@ -169,13 +177,14 @@ func main() {
 	//splitting the string after occurrence
 	result7 := strings.SplitAfter(str3, ",")
 	fmt.Println(result7)
-
+	fmt.Println("-----------------------------------")
 	//splitting the string after n occurrence
 	res1 := strings.SplitAfterN(str3, ",", 2)
 	fmt.Println(res1)
 	//splitN
 	result8 := strings.SplitN(str3, ",", 2)
 	fmt.Println(result8)
+	fmt.Println("-----------------------------------")
 	//comparing strings using operators
 	s11 := "Hello"
 	s21 := "Geeks"
@@ -185,16 +194,17 @@ func main() {
 	fmt.Println("s11 == s21:", s11 == s21) // false
 	fmt.Println("s11 == s31:", s11 == s31) // true
 	fmt.Println("s11 != s21:", s11 != s21) // true
-
+	fmt.Println("-----------------------------------")
 	// Lexicographical comparison
 	fmt.Println("s11 < s21:", s11 < s21)   // true
 	fmt.Println("s11 > s21:", s11 > s21)   // false
 	fmt.Println("s11 <= s31:", s11 <= s31) // true
 	fmt.Println("s11 >= s31:", s11 >= s31) // true
+	fmt.Println("-----------------------------------")
 	//comparing strings using compare function
-	fmt.Println("strings.Compare(s11, s21):", strings.Compare(s11, s21)) // -1
-	fmt.Println("strings.Compare(s11, s31):", strings.Compare(s11, s31)) // 0
-	fmt.Println("strings.Compare(s21, s11):", strings.Compare(s21, s11)) // 1
+	fmt.Println("strings.Compare(s11, s21):", strings.Compare(s11, s21))  // -1
+	fmt.Println("strings.Compare(s11, s31):", strings.Compare(s11, s31))  // 0
+	fmt.Println("😊strings.Compare(s21, s11):", strings.Compare(s21, s11)) // 1
 }
 
 // strings are immutable once a string is created the value of the string cannot be changed. Or in other words, strings are read-only. If you try to change,

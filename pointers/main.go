@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //Pointers in Go programming language or Golang is a variable that is used
 //  to store the memory address of another variable. Pointers in Golang is
 // also termed as the special variables. The variables are used to store
@@ -12,9 +14,9 @@ package main
 // & operator termed as address operator used to returns the address of a variable or to access the address of a variable to a pointer.
 //Declaration a pointer:-var pointer_name *Data_Type
 //var s *string
-//initilizationofpointer
+//initilization of pointer
 //var a = 45
-//initializationofpointerswithmenoryaddressofvariable
+//initialization of pointers with memory address of variable
 //var s *int = &a
 //importantpoints
 //1.The default value or zero-value of a pointer is always nil. Or you can say that an uninitialized pointer will always have a nil value.
@@ -33,68 +35,70 @@ func main() {
 
 	// storing the hexadecimal
 	// values in variables
-	// x := 0xFF
-	// y := 0x9C
+	x := 0xFF
+	y := 0x9C
 
-	// // Displaying the values
-	// fmt.Printf("Type of variable x is %T\n", x)
-	// fmt.Printf("Value of x in hexadecimal is %X\n", x)
-	// fmt.Printf("Value of x in decimal is %v\n", x)
+	// Displaying the values
+	fmt.Printf("Type of variable x is %T\n", x)
+	fmt.Printf("Value of x in hexadecimal is %X\n", x)
+	fmt.Printf("Value of x in decimal is %v\n", x)
+	fmt.Println("-----------------------------")
+	fmt.Printf("Type of variable y is %T\n", y)
+	fmt.Printf("Value of y in hexadecimal is %X\n", y)
+	fmt.Printf("Value of y in decimal is %v\n", y)
+	//taking a normal variable
+	fmt.Println("-----------------------------")
+	var px int = 5748
+	//declaration of pointer
+	var p *int
+	//initilazation of pointer
+	p = &px
+	// displaying the result
+	fmt.Println("Value stored in x = ", px)
+	fmt.Println("Address of x = ", &px)
+	fmt.Println("Value stored in variable p = ", p)
+	fmt.Println("-----------------------------")
+	// using var keyword
+	// we are not defining
+	// any type with variable
+	var py = 458
 
-	// fmt.Printf("Type of variable y is %T\n", y)
-	// fmt.Printf("Value of y in hexadecimal is %X\n", y)
-	// fmt.Printf("Value of y in decimal is %v\n", y)
-	// //takinganormalvariable
+	// taking a pointer variable using
+	// var keyword without specifying
+	// the type
+	var pp = &py
 
-	// var px int = 5748
-	// //declarationofpointer
-	// var p *int
-	// //initilazationofpointer
-	// p = &px
-	// // displaying the result
-	// fmt.Println("Value stored in x = ", px)
-	// fmt.Println("Address of x = ", &px)
-	// fmt.Println("Value stored in variable p = ", p)
+	fmt.Println("Value stored in y = ", py)
+	fmt.Println("Address of y = ", &py)
+	fmt.Println("Value stored in pointer variable p = ", pp)
+	fmt.Println("-----------------------------")
+	// using := operator to declare
+	// and initialize the variable
+	pz := 458
 
-	// // using var keyword
-	// // we are not defining
-	// // any type with variable
-	// var py = 458
+	// taking a pointer variable using
+	// := by assigning it with the
+	// address of variable y
+	ppp := &pz
 
-	// // taking a pointer variable using
-	// // var keyword without specifying
-	// // the type
-	// var pp = &py
+	fmt.Println("Value stored in z = ", pz)
+	fmt.Println("Address of z = ", &pz)
+	fmt.Println("Value stored in pointer variable p = ", ppp)
+	fmt.Println("-----------------------------")
+	// this is dereferencing a pointer
+	// using * operator before a pointer
+	// variable to access the value stored
+	// at the variable at which it is pointing
 
-	// fmt.Println("Value stored in y = ", py)
-	// fmt.Println("Address of y = ", &py)
-	// fmt.Println("Value stored in pointer variable p = ", pp)
-
-	// // using := operator to declare
-	// // and initialize the variable
-	// pz := 458
-
-	// // taking a pointer variable using
-	// // := by assigning it with the
-	// // address of variable y
-	// ppp := &pz
-
-	// fmt.Println("Value stored in y = ", pz)
-	// fmt.Println("Address of y = ", &pz)
-	// fmt.Println("Value stored in pointer variable p = ", ppp)
-
-	// // this is dereferencing a pointer
-	// // using * operator before a pointer
-	// // variable to access the value stored
-	// // at the variable at which it is pointing
-
-	// fmt.Println("Value stored in y(*p) = ", *p)
-	// // changing the value of y by assigning
-	// // the new value to the pointer
-	// *p = 500
-
-	// fmt.Println("Value stored in y(*p) after Changing = ", y)
+	fmt.Println("Value stored in z(*ppp) = ", *ppp)
+	// changing the value of z by assigning
+	// the new value to the pointer
+	*ppp = 500
+	fmt.Println("-----------------------------")
+	fmt.Println("Value stored in z(*ppp) after Changing = ", pz)
 	//passing pointer in function
-	//pointer_func()
+	fmt.Println("-----------------------------")
+	pointer_func()
+	fmt.Println("-----------------------------")
 	struct_pointer()
 }

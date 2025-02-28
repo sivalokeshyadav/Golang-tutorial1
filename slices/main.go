@@ -33,15 +33,15 @@
 // slice starting from the lower bound to the upper bound
 // syntax:slice_name[low:high]
 // usingmake():-This function takes three parameters, i.e, type, length, and capacity.
-
+//
 //		Here, capacity value is optional. It assigns an underlying array with a
-//	 size that is equal to the given capacity and returns a slice which
+//	size that is equal to the given capacity and returns a slice which
 //
 // refers to the underlying array. Generally, make() function is used
 //
 //	to create an empty slice
 //
-// itrratiomoverslice
+// itrration over slice
 // important points in slice
 // Zero value slice: In Go language, you are allowed to create a nil slice
 // that does not contain any element in it. So the capacity and the length of this slice is 0.
@@ -69,7 +69,7 @@ func main() {
 	fmt.Printf("Length of the slice: %d", len(myslice))
 
 	// Display the capacity of the slice
-	fmt.Printf("\nCapacity of the slice: %d", cap(myslice))
+	fmt.Printf("\nCapacity of the slice: %d\n", cap(myslice))
 	//slice using string literal
 	var my_slice_1 = []string{"Geeks", "for", "Geeks"}
 	fmt.Println("--------------------------------")
@@ -167,8 +167,8 @@ func main() {
 
 	// If you try to run this commented
 	// code compiler will give an error
-	/*s3 := []int{23, 45, 66}
-	fmt.Println(s1 == s3)
+	/*comps3 := []int{23, 45, 66}
+	fmt.Println(comps1 == comps3)
 	*/
 	// Checking if the given slice is nil or not
 	fmt.Println(comps1 == nil)
@@ -184,12 +184,16 @@ func main() {
 	fmt.Println("Slice 1 : ", mds1)
 
 	// Creating multi-dimensional slice
+	// mds2 := [][]string{
+	// 	[]string{"Geeks", "for"},
+	// 	[]string{"Geeks", "GFG"},
+	// 	[]string{"gfg", "geek"},
+	// }
 	mds2 := [][]string{
-		[]string{"Geeks", "for"},
-		[]string{"Geeks", "GFG"},
-		[]string{"gfg", "geek"},
+		{"Geeks", "for"},
+		{"Geeks", "GFG"},
+		{"gfg", "geek"},
 	}
-
 	// Accessing multi-dimensional slice
 	fmt.Println("Slice 2 : ", mds2)
 }
